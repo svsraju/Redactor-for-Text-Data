@@ -13,11 +13,14 @@ from mosestokenizer import MosesTokenizer
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 import project1
 import os.path
+import os
 import pickle
+import ntpath
 
 
 total_data = []
 all_files = []
+
 
 def readdata(files):
     
@@ -25,15 +28,21 @@ def readdata(files):
     #checking all the .txt files present in the directory
     
     all_text_files = glob.glob(files)
+    #print(len(all_text_files))
     all_files.append(all_text_files)
-    print(all_files) 
+    print(len(all_text_files))
+
     for i in range(len(all_text_files)):
-        my_file = open(all_text_files[i],'r')
-        data = my_file.read()
+        #my_file = open(all_text_files[i],'r')
+        data = open(all_text_files[i]).read()
+        #print(data)
         #lines = data.readlines()
         total_data.append(data)
-
+    
+    print(len(total_data))
     return total_data
+
+
 
 #############################################################3
 
@@ -310,21 +319,19 @@ def finalstats(stats,order):
     return finalstats
 
 
-def output(location,complete_data):
+def output(complete_data):
         
     outputfiles = []
 
+    import ntpath
     for i in range(len(all_files)):
         for j in range(len(all_files[i])):
-            r = re.compile(".txt")
-            all_files[i][j] = r.sub(".redacted",all_files[i][j])
-            outputfiles.append(all_files[i][j])
-            print(outputfiles)
-
+            path=os.path.splitext(all_files[i][j])[0]
+            path=ntpath.basename(path)+ '.redacted'
+            outputfiles.append(path)
+           
     for i in range(len(outputfiles)):
-        completeName = os.path.join(location,outputfiles[i])
-        print(completeName)
+        completeName = os.path.join('files/', outputfiles[i])
         with open(completeName, 'w', encoding = 'utf-8') as file1:
             file1.write(complete_data[i])
-            file1.close() 
-
+            file1.close()   

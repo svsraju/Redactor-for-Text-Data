@@ -20,6 +20,14 @@ redaction_order = []
 for i in range(len(argumentList)):
     if argumentList[i] == "--input":
         file_red =  project1.readdata(argumentList[i+1])
+
+print(len(file_red))
+
+a = file_red
+
+#print(len(file_red))
+
+for i in range(len(argumentList)):
     if argumentList[i] in redact:
         redaction_order.append(argumentList[i])
     
@@ -35,6 +43,12 @@ for item  in redaction_order:
         file_red = project1.remove_address(file_red)
     if item == "--phones":
         file_red = project1.remove_phones(file_red)
+
+#print(len(file_red))
+
+
+
+
 
 
 '''
@@ -113,9 +127,11 @@ if len(redaction_order) <= count:
 
 
 for i in range(len(argumentList)):
-    #if len(argumentList) == 5:
     if argumentList[i] == '--concept':
         concept = project1.concept(argumentList[i+1],file_red)
+
+print(len(concept))
+
 
 '''
     if len(argumentList) == 4:
@@ -134,25 +150,23 @@ for i in range(len(argumentList)):
         if argumentList[i] == '--concept':
             concept = project1.concept(argumentList[i+1],file0)
 
-'''
-complete_stats = {}
 
-for i in range(len(argumentList)):
-    if argumentList[i] == "--input":
-        a =  project1.readdata(argumentList[i+1])
+
+'''
+
 
 
 for i in range(len(argumentList)):
     if argumentList[i] == '--stats':
         final_stats = project1.stats(a,redaction_order)
-        print(final_stats)
         complete_stats = project1.finalstats(final_stats,redaction_order)
 
 
 
 for i in range(len(argumentList)):
     if argumentList[i] == '--output':
-        final_output = project1.output(argumentList[i+1],concept)
+        final_output = project1.output(concept)
+
 
 #print(file_red)
 
@@ -160,11 +174,8 @@ for i in range(len(argumentList)):
 #for i in range(len(concept)):
 #    print(concept[i])
 
-#print(complete_stats)
 
-
-
-
-
+print(final_stats)
+print(complete_stats)
 
 
