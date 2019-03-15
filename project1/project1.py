@@ -30,7 +30,7 @@ def readdata(files):
     all_text_files = glob.glob(files)
     #print(len(all_text_files))
     all_files.append(all_text_files)
-    print(len(all_text_files))
+    #print(len(all_text_files))
 
     for i in range(len(all_text_files)):
         #my_file = open(all_text_files[i],'r')
@@ -39,7 +39,7 @@ def readdata(files):
         #lines = data.readlines()
         total_data.append(data)
     
-    print(len(total_data))
+   #print(len(total_data))
     return total_data
 
 
@@ -57,7 +57,7 @@ def extract_entity_names(t):
             entity_names.append(' '.join([child[0] for child in t.leaves()]))
         else:
             for child in t:
-                entity_names.extend(project1.extract_entity_names(child))
+                entity_names.extend(extract_entity_names(child))
 
     return entity_names
 
@@ -72,7 +72,7 @@ def red_names(a):
         tagged_sentences = [nltk.pos_tag(sentence) for sentence in tokenized_sentences]
         chunked_sentences = nltk.ne_chunk_sents(tagged_sentences, binary = False)
         for tree in chunked_sentences:
-            entity_names.extend(project1.extract_entity_names(tree))
+            entity_names.extend(extract_entity_names(tree))
         for e in entity_names:
             redaction_file = redaction_file.replace(e,'██')
         final_file.append(redaction_file)
@@ -309,7 +309,7 @@ def finalstats(stats,order):
         if c==4:
             temp5dict=stats[it]
             for key,value in temp5dict.items():
-                d1=temp5dict[key]-temp5dict[key]
+                d1=temp5dict[key]-temp4dict[key]
                 x[key]=d1
             finalstats[it]=x
             
@@ -327,11 +327,22 @@ def output(complete_data):
     for i in range(len(all_files)):
         for j in range(len(all_files[i])):
             path=os.path.splitext(all_files[i][j])[0]
-            path=ntpath.basename(path)+ '.redacted'
+            path=ntpath.basename(path)+ '.redacted.txt'
             outputfiles.append(path)
            
     for i in range(len(outputfiles)):
         completeName = os.path.join('files/', outputfiles[i])
         with open(completeName, 'w', encoding = 'utf-8') as file1:
             file1.write(complete_data[i])
-            file1.close()   
+            file1.close()  
+
+
+def extractstatoutput(statsdict):
+    file1=open('stderr/stder.txt', 'w', encoding = 'utf-8')
+    print(statsdict)
+    for key,value in statsdict.items():
+        list=[str(item) for item in value]
+        string=' '.join(list)
+        file1.write(str(key))
+        file1.write(str(string))
+    file1.close()

@@ -1,0 +1,70 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "ab154c6fb06718e0a4f0fbb1297174058c0417113df3bad723c05da5d62ead03"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.6"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "docopt": {
+            "hashes": [
+                "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
+            ],
+            "version": "==0.6.2"
+        },
+        "mosestokenizer": {
+            "hashes": [
+                "sha256:2d65a781add83e93612a5e491a2cfc9c3740048b8a028556a4e23fceb1a7d48a",
+                "sha256:4de94102c00ad21ea26c1d8327bf72d38288c6c83c9b2920fb9a86c66eddf8b7"
+            ],
+            "index": "pypi",
+            "version": "==1.0.0"
+        },
+        "nltk": {
+            "hashes": [
+                "sha256:286f6797204ffdb52525a1d21ec0a221ec68b8e3fa4f2d25f412ac8e63c70e8d"
+            ],
+            "index": "pypi",
+            "version": "==3.4"
+        },
+        "openfile": {
+            "hashes": [
+                "sha256:d21b69dba1306c9dd397a44fd8f4fa8a83812f1d935c409085e8a25c411d16ec",
+                "sha256:ea4e8f19112049f578ec161b12f70c1113144988c0a488ab173a138b50f37479"
+            ],
+            "version": "==0.0.7"
+        },
+        "singledispatch": {
+            "hashes": [
+                "sha256:5b06af87df13818d14f08a028e42f566640aef80805c3b50c5056b086e3c2b9c",
+                "sha256:833b46966687b3de7f438c761ac475213e53b306740f1abfaa86e1d1aae56aa8"
+            ],
+            "version": "==3.4.0.3"
+        },
+        "six": {
+            "hashes": [
+                "sha256:3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c",
+                "sha256:d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
+            ],
+            "version": "==1.12.0"
+        },
+        "toolwrapper": {
+            "hashes": [
+                "sha256:706f1f960e2b44de25a859417ac287e62de5db00e15ba5b60ef07d5bceacdc80",
+                "sha256:8987ff7efa1d86ffbc0506d9553aa22ea321fec4e4bb7e16021aa29e5799a28d"
+            ],
+            "version": "==0.3.0"
+        }
+    },
+    "develop": {}
+}
