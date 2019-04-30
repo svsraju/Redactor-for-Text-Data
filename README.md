@@ -1,14 +1,14 @@
-The Redactor
-===
-Whenever sensitive information is shared with the public, the data must go through a redaction process. That is, all sensitive names, places, and other sensitive information must be hidden. Docume
-nts such as police reports, court transcripts, and hospital records all containing sensitive information. Redacting this information is often expensive and time consuming.
-In this project you will see me using the knowledge of Python and the Linux command line tools to wrangle through all the files which we are interested in.So we use different nltk inbuilt librarie
-s and make sure our desired output file is redacted.
-----
+# The Redactor
+
+Whenever sensitive information is shared with the public, the data must go through a redaction process. That is, all sensitive names, places, and other sensitive information must be hidden. Documents such as police reports, court transcripts, and hospital records all containing sensitive information. Redacting this information is often expensive and time consuming.
+In this project you will see me using the knowledge of Python and the Linux command line tools to wrangle through all the files which we are interested in.So we use different nltk inbuilt libraries and make sure our desired output file is redacted.
+
+
 Project Source can viewed from  https://oudalab.github.io/textanalytics/projects/project1
 -------------
 Author 
 ---
+
 **Venkata Subbaraju Sagi**
 All known Bugs and fixes can be sent to subbaraju.v@ou.edu
 Packages required for the project : glob,nltk,
@@ -68,14 +68,15 @@ You can create each initial file and folder using the touch and mkdir commands. 
 s more example of proper python packages https://python-packaging.readthedocs.io/en/latest/minimal.html
 you will get more insights of running your project0.py file, but to make it clear
 After the code is installed, you should be able to run the code using the command below.
-**pipenv run python redactor.py --input '*.txt' \
+```
+pipenv run python redactor.py --input '*.txt' \
                     --input 'otherfiles/*.txt' \
                     --names --dates --addresses --phones \
                     --concept 'kids' \
                     --output 'files/' \
-                    --stats stderr **
+                    --stats stderr 
 
-
+```
 Running the program with this command line argument should read all files ending with .txt in in the current folder and also all files ending in .txt from the folder called otherfiles/. All these 
 files will be redacted by the program. The program will look to redact all names, dates, addresses and phone numbers. Notice the flag --concept, this flag asks the system to redact all portions of
  text that have anything to do with a particular concept. In this case, all paragraphs or sentences that contain information about “kids” should be redacted. It is up you to determine what represe
