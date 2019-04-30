@@ -10,6 +10,7 @@ Author
 ---
 
 **Venkata Subbaraju Sagi**
+
 All known Bugs and fixes can be sent to subbaraju.v@ou.edu
 Packages required for the project : glob,nltk,
 
@@ -80,8 +81,8 @@ pipenv run python redactor.py --input '*.txt' \
 Running the program with this command line argument should read all files ending with .txt in in the current folder and also all files ending in .txt from the folder called otherfiles/. All these 
 files will be redacted by the program. The program will look to redact all names, dates, addresses and phone numbers. Notice the flag --concept, this flag asks the system to redact all portions of
  text that have anything to do with a particular concept. In this case, all paragraphs or sentences that contain information about “kids” should be redacted. It is up you to determine what represe
-nts a concept. All the redacted files should be transformed to new .txt files and written to the location described by --output flag. The final parameter, --stats, describes the file or location t
-o write the statistics of the redacted files. Below we discuss each of the parameter in additional detail.
+nts a concept. All the redacted files should be transformed to new .txt files and written to the location described by --output flag. The final parameter, --stats, describes the file or location to write the statistics of the redacted files. Below we discuss each of the parameter in additional detail.
+
 Description of Functions Used
 ---
 I have two files to run the program, in `project1/project1.py'` I have written all function definitions and in `project1/redactor.py`, I have called these functions.
