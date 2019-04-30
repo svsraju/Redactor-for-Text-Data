@@ -86,30 +86,43 @@ nts a concept. All the redacted files should be transformed to new .txt files an
 Description of Functions Used
 ---
 I have two files to run the program, in `project1/project1.py'` I have written all function definitions and in `project1/redactor.py`, I have called these functions.
+
 Parameters
+
 **–input**
+
 This parameter takes a glob that represents the files that can be accepted. More than one input flag may be used to specify groups of files. If a file cannot be read or redacted an appropriate err
 or message should be displayed to the user.
+
+
 **–output**
+
 This flag should specify a directory to store all the redacted files. The redacted files, regardless of their input type should be written to txt files. Each file should have the same name as the 
 original file with the extension .redacted appended to the file name.
+
+
 **Redaction flags**
+
 The redaction flags list the entity types that should be extracted from all the input documents. The list of flags you are required to implements are:
+```
 --names
 --genders
 --dates
 --addresses
 --phones
-You are free to add you own! Note: gender should be any term that reveals the gender of a person (e.g. him, her, etc.). The other definitions of the rest of the terms should be straight forward. I
-n your README.md discussion file clearly give the parameters you apply to each of the flags — be clear what constitutes a an address and phone number. The redacted characters in the document shoul
-d be replaced upon with a character of your choice. Some popular characters include the unicode full block character █ (U+2588). You should redact only the words, not the whitespaces. If you belie
-ve that one should also redact whitespaces between words (e.g. in a first and last name) please discuss why in your README.md.
+
+```
+
+You are free to add you own! Note: gender should be any term that reveals the gender of a person (e.g. him, her, etc.). The other definitions of the rest of the terms should be straight forward. The redacted characters in the document should be replaced upon with a character of your choice. Some popular characters include the unicode full block character █ (U+2588). You should redact only the words, not the whitespaces. If you believe that one should also redact whitespaces between words (e.g. in a first and last name).
+
 **–concept**
+
 This flag, which can be repeated one or more times, takes one word or phrase that represents a concept. A concept is either an idea or theme. Any section of the input files that refer to this conc
 ept should be redacted. For example, if the given concept word is prison, a sentence (or paragraph) either containing the word or similar concepts, such as jail or incarcerated, that whole sentenc
 e should be redacted. In your README.md file, make your definition of a concept clear. Also, clearly state how you create the context of a concept.
 
 **—stats**
+
 Stats takes either the name of a file, or special files (stderr, stdout), and writes a summary of the redaction process. Some statistics to include are the types and counts of redacted terms and the statistics of each redacted file. Be sure to describe the format of your outfile to in your README file. Stats should help you while developing your code.
 
 ---
