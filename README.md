@@ -129,13 +129,20 @@ Stats takes either the name of a file, or special files (stderr, stdout), and wr
 List of external links that I used for help
 --
 https://www.digitalocean.com/community/tutorials/how-to-handle-plain-text-files-in-python-3 # understanding the basics of text file
+
 https://stackoverflow.com/questions/35672809/how-to-read-a-list-of-txt-files-in-a-folder-in-python #used for taking all text files in the current folder
+
 https://docs.python.org/2/library/logging.html
+
 https://medium.com/@acrosson/extracting-names-emails-and-phone-numbers-5d576354baa #extracting the data and facing issues for installing required packages
+
 https://towardsdatascience.com/named-entity-recognition-with-nltk-and-spacy-8c4a7d88e7da
+
 https://stackoverflow.com/questions/31088509/identifying-dates-in-strings-using-nltk
-https://stackoverflow.com/questions/3868753/find-phone-numbers-in-python-script?utm_source=zapier.com&utm_medium=referral&utm_campaign=zapier # for finding phone numbers
+
+
 https://www.geeksforgeeks.org/get-synonymsantonyms-nltk-wordnet-python/
+
 https://stackoverflow.com/questions/5319922/python-check-if-word-is-in-a-string https://stackoverflow.com/questions/30150047/find-all-locations-cities-places-in-a-text#  for getting addresses
 
 ------
