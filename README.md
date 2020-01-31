@@ -3,8 +3,6 @@
 Whenever sensitive information is shared with the public, the data must go through a redaction process. That is, all sensitive names, places, and other sensitive information must be hidden. Documents such as police reports, court transcripts, and hospital records all containing sensitive information. Redacting this information is often expensive and time consuming.
 In this project you will see me using the knowledge of Python and the Linux command line tools to wrangle through all the files which we are interested in.So we use different nltk inbuilt libraries and make sure our desired output file is redacted.
 
-
-Project Source can viewed from  https://oudalab.github.io/textanalytics/projects/project1
 -------------
 Author 
 ---
